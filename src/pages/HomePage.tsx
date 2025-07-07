@@ -70,9 +70,9 @@ const HomePage: React.FC = () => {
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
                       index === 0 ? 'bg-yellow-500 text-black' :
                       index === 1 ? 'bg-gray-400 text-black' :
-                      index === 2 ? 'bg-amber-600 text-white' :
-                      'bg-cyber-blue/20 text-cyber-blue'
-                    }`}>
+                        index === 2 ? 'bg-amber-600 text-white' :
+                          'bg-cyber-blue/20 text-cyber-blue'
+                      }`}>
                       {index + 1}
                     </div>
                     <div className="flex-1">
@@ -90,7 +90,7 @@ const HomePage: React.FC = () => {
                       </div>
                       <span className={`text-xs px-2 py-1 rounded ${
                         novel.status === '連載中' ? 'bg-cyber-blue/20 text-cyber-blue' : 'bg-cyber-pink/20 text-cyber-pink'
-                      }`}>
+                        }`}>
                         {novel.status}
                       </span>
                     </div>
@@ -153,24 +153,10 @@ const HomePage: React.FC = () => {
               </div>
             </section>
           </div>
-            {/* Twitter Widget */}
-            <TwitterWidget />
-
-            {/* Ad Space */}
-            <div className="bg-gradient-to-br from-cyber-pink/20 to-cyber-blue/20 border border-cyber-pink/30 rounded-lg p-6 text-center">
-              <h3 className="text-lg font-semibold text-cyber-pink mb-2">プレミアム会員募集</h3>
-              <p className="text-sm text-cyber-gray mb-4">広告なし・高速読み込み・専用機能が使い放題</p>
-              <button className="bg-gradient-to-r from-cyber-pink to-cyber-blue text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyber-pink/25 transition-all">
-                詳細を見る
-              </button>
-            </div>
-
-            {/* Mini banners */}
-            <MiniBanners />
-          </div>
-
+          <Sidebar />
         </div>
       </div>
+    </div>
   );
 };
 
