@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Crown, TrendingUp, Clock, Star, Eye, Heart, MessageCircle } from 'lucide-react';
+import { Crown, TrendingUp, Clock, Star, Eye, Heart, MessageCircle, Sidebar } from 'lucide-react';
+import MiniBanners from '../components/MiniBanners/MiniBanners';
+import TwitterWidget from '../components/TwitterWidget/TwitterWidget';
 
 const HomePage: React.FC = () => {
   const rankingNovels = [
@@ -151,23 +153,8 @@ const HomePage: React.FC = () => {
               </div>
             </section>
           </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
             {/* Twitter Widget */}
-            <div className="bg-cyber-darker/50 border border-cyber-blue/30 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-cyber-blue mb-4">公式Twitter</h3>
-              <div className="space-y-3">
-                <div className="p-3 bg-cyber-dark/50 rounded">
-                  <p className="text-sm text-cyber-gray">新機能「AIアシスタント執筆支援」がリリースされました！</p>
-                  <span className="text-xs text-cyber-gray">2時間前</span>
-                </div>
-                <div className="p-3 bg-cyber-dark/50 rounded">
-                  <p className="text-sm text-cyber-gray">今週のランキング1位は『サイバーパンク・ラプソディ』です！</p>
-                  <span className="text-xs text-cyber-gray">5時間前</span>
-                </div>
-              </div>
-            </div>
+            <TwitterWidget />
 
             {/* Ad Space */}
             <div className="bg-gradient-to-br from-cyber-pink/20 to-cyber-blue/20 border border-cyber-pink/30 rounded-lg p-6 text-center">
@@ -179,20 +166,11 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Mini banners */}
-            <div className="space-y-4">
-              <div className="bg-cyber-green/20 border border-cyber-green/30 rounded-lg p-4 text-center">
-                <h4 className="text-cyber-green font-semibold mb-2">執筆コンテスト開催中</h4>
-                <p className="text-xs text-cyber-gray">賞金総額100万円</p>
-              </div>
-              <div className="bg-cyber-orange/20 border border-cyber-orange/30 rounded-lg p-4 text-center">
-                <h4 className="text-cyber-orange font-semibold mb-2">書籍化決定作品</h4>
-                <p className="text-xs text-cyber-gray">『電脳世界の冒険』</p>
-              </div>
-            </div>
+            <MiniBanners />
           </div>
+
         </div>
       </div>
-    </div>
   );
 };
 
