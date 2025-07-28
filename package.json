@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "lint-staged": {
     "*.{ts, js}": "eslint --fix",
